@@ -15,17 +15,22 @@ public class EmployeeWage {
     static final int PART_TIME_HOUR=4;
     static final int IS_FULL_TIME=2;
     static final int IS_PART_TIME=1;
+    static final int WORKING_DAYS_PER_MONTH=20;
 public static void main(String args[]) {
-	/*
-	 * Checked the employee present or absent condition by using random function
-	 */
-	int checkResult=(int)Math.floor(Math.random()*10) % 3;
-	/*
-	 * initial Daily wage we have to take zero
-	 */
+	
+	
+	
+	int day=1;
+	int totalWage=0;
+	while(day<=WORKING_DAYS_PER_MONTH) {
+		/*
+		 * Checked the employee present or absent condition by using random function
+		 */
+		
+		int checkResult=(int)Math.floor(Math.random()*10) % 3;
 	int dailyWage=0;
 	/*
-	 * Checking the condition by using if esle condition
+	 * Checking the condition by using switch case 
 	 */
 	switch(checkResult) {
     case IS_FULL_TIME:
@@ -40,5 +45,9 @@ public static void main(String args[]) {
         System.out.println("Employee is absent");
 }
 System.out.println("Daily Wage of employee is => "+dailyWage);
+day++;
+}
+	 System.out.println("Tatal Wages of employee is => "+totalWage);
 }
 }
+
