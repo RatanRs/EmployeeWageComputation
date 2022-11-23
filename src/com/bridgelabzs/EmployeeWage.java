@@ -11,9 +11,15 @@ public class EmployeeWage {
  * @param args
  */
 public static void main(String args[]) {
-	/* 
-	 * Printing welcome meassage;
+	/*
+	 * Checked the employee present or absent condition by using random function
 	 */
-	System.out.println("Welcome to Employee wage Computation Program");
+	int checkResult=(int)Math.floor(Math.random()*10) % 2;
+	if(checkResult==1) {
+		System.out.println("Employee is present");
+	}
+	else {
+		System.out.println("Employee is Absent");
+	}
 }
 }
