@@ -11,15 +11,19 @@ public class EmployeeWage {
 	 * 
 	 * @param args
 	 */
-	static final int WAGE_PER_HOUR = 20;
+
 	static final int FULL_TIME_HOUR = 8;
 	static final int PART_TIME_HOUR = 4;
 	static final int IS_FULL_TIME = 2;
 	static final int IS_PART_TIME = 1;
-	static final int WORKING_DAYS_PER_MONTH = 20;
-	static final int WORKING_HOURS_PER_MONTH = 100;
 
-	public static void employeWage() {
+	/***
+	 * 
+	 * @param WAGE_PER_HOUR
+	 * @param WORKING_DAYS_PER_MONTH
+	 * @param WORKING_HOURS_PER_MONTH
+	 */
+	public static void employeWage(int WAGE_PER_HOUR, int WORKING_DAYS_PER_MONTH, int WORKING_HOURS_PER_MONTH) {
 		int day = 1;
 		int totalWages = 0;
 		int empHours = 0;
@@ -45,11 +49,20 @@ public class EmployeeWage {
 			day++;
 		}
 		System.out.println("Total working hours of employee is => " + empHours);
-		System.out.println("Tatal Wages of employee is => " + totalWages);
+		System.out.println("Total Wages of employee is => " + totalWages);
 	}
 
 	public static void main(String[] args) {
-		employeWage();
+		/*
+		 * Created object called company
+		 */
+		EmployeeWage company = new EmployeeWage();
+		System.out.println("Employee Wage for Oracle =");
+		company.employeWage(20, 30, 40);
+		System.out.println("Employee Wage for TCS =");
+		company.employeWage(21, 22, 45);
+		System.out.println("Employee Wage for IBM =");
+		company.employeWage(21, 22, 49);
 	}
 
 }
